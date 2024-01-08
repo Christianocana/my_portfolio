@@ -35,7 +35,7 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --pink: #ff3258;
+    --custom: #008000;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
@@ -131,8 +131,10 @@ h3 {
 .heading-primary {
     line-height: 1;
     font-size: var(--font-size-huge);
-    font-weight: 400;
+    font-weight: 600;
+    padding: 0rem 0rem;
 }
+
 
 @media(max-width: 900px) {
     .heading-primary {
@@ -150,7 +152,7 @@ h2::after {
     display: block;
     height: 2px;
     width: 10rem;
-    background: var(--pink);
+    background: var(--custom);
     margin: var(--gutter-small) 0;
 }
 
@@ -201,7 +203,7 @@ a {
 
 button:focus,
 a:focus {
-    outline: 2px solid var(--pink);
+    outline: 2px solid var(--custom);
 }
 
 body:not(.user-is-tabbing) button:focus,
@@ -210,7 +212,24 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link:hover {
-    color: var(--pink);
+    color: var(--custom);
+}
+
+.border {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid  var(--white);
+    border-radius: 10px;
+    background: var(--black);
+    transition: all 0.2s;
+}
+.border:hover,
+.border:focus {
+    right: 0;
+    border-color: var(--custom);
+    color: var(--custom);
+    transition: all 0.2s;
 }
 
 .btn {
@@ -219,7 +238,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--pink);
+    border: 1px solid  var(--custom);
     font-weight: 400;
 }
 
@@ -243,20 +262,20 @@ body:not(.user-is-tabbing) a:focus {
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
-    background: var(--pink);
+    background: var(--custom);
 }
 
-.btn--pink {
-    background: var(--pink);
+.btn--custom {
+    background: var(--custom);
     transition: all 0.2s;
 }
 
-.btn--pink::after {
+.btn--custom::after {
     display: none;
 }
 
-.btn--pink:hover,
-.btn--pink:focus {
+.btn--custom:hover,
+.btn--custom:focus {
     background: transparent;
 }
 
@@ -266,7 +285,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: .6rem;
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid var(--pink);
+    border-bottom: 1px solid var(--custom);
 }
 
 .link__text::after {
@@ -289,7 +308,7 @@ body:not(.user-is-tabbing) a:focus {
 .link__text:hover::after,
 .link__text:focus:after {
     right: 0;
-    background: var(--pink);
+    background: var(--custom);
 }
 
 .link__text span {
@@ -308,7 +327,7 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
     height: 5.5rem;
     width: 5.5rem;
-    background-color: var(--pink);
+    background-color: var(--custom);
     border-radius: 50%;
     z-index: 10;
     visibility: hidden;
@@ -390,13 +409,13 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__link:hover {
-    color: var(--pink);
+    color: var(--custom);
 }
 
 .nav__link:hover::after {
     right: 0;
     height: 2px;
-    background: var(--pink);
+    background: var(--custom);
 }
 
 /* --------------------------------------- */
@@ -408,8 +427,8 @@ body:not(.user-is-tabbing) a:focus {
     url('./images/header.jpg');
     height: 100vh;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: bottom;
+    background-attachment: scroll;
     font-size: var(--font-size-normal);
 }
 
